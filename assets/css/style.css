@@ -1,0 +1,112 @@
+main {
+    margin-bottom: 100px;
+}
+
+#modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 671px;
+    height: 581px;
+    max-width: 90%;
+    max-height: 90%;
+    padding: 1.2rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#modal h1 {
+    margin: 100px 0 65px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 39px;
+    line-height: 20px;
+}
+
+#modal p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 30px;
+}
+
+.modalBotao {
+    margin-top: 70px;
+    width: 253px;
+    height: 48px;
+}
+
+.btn-buy {
+    display: none;
+}
+
+.mBotao,
+.modalBotao {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #F6F5FB;
+    background: #2A3342;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.mBotao{
+    width: 202px;
+    height: 48px;
+    margin: 0 auto 20px;
+}
+
+.mBotao:hover, .modalBotao:hover {
+    background: #2a3342de;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    transition: .5s;
+}
+
+#plano-fundo {
+    background-color: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+}
+
+#modal,
+#plano-fundo {
+    transition: .6s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#modal.ocultar,
+#plano-fundo.ocultar {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal.ocultar {
+    top: 0;
+}
+
+#fecha-modal {
+    align-self: flex-end;
+    margin-bottom: 10px;
+    padding: 5px;
+}
